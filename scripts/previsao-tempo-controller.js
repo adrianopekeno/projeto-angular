@@ -1,5 +1,5 @@
 angular.module('aplicacao').controller('PrevisaoTempoController', function($scope, $resource) {
-    var WeatherChannel = $resource('http://api.openweathermap.org/data/2.5/weather?q=Patos,BR&units=metric&APPID=35485fe87c10402c2b0c3695a0cd0d3b');
+    var WeatherChannel = $resource('https://api.hgbrasil.com/weather/?format=json&woeid=455977');
 
     var getWeather = function() {
         WeatherChannel.get().$promise.then(function(response) {
